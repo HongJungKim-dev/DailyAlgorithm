@@ -12,6 +12,7 @@ int main() {
 	int add_case[12] = { 0 };
 
 	cin >> loop;
+
 	for (i = 0; i < loop; i++) {
 		cin >> num;
 		add_result = add(num, add_case);
@@ -23,12 +24,14 @@ int add(int num, int* add_case) {
 	if (num == 1) {
 		return 1;
 	}
-	if (num == 2) {
+	else if (num == 2) {
 		return 2;
 	}
-	if (num == 3) {
+	else if (num == 3) {
 		return 4;
 	}
+	else if (add_case[num] != 0) {
+		return add_case[num];
+	}
 	return add_case[num] = add(num - 1, add_case) + add(num - 2, add_case) + add(num - 3, add_case);
-
 }
