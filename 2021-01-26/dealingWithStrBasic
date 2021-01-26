@@ -1,0 +1,6 @@
+function solution(s) {
+  const strLen = s.length;
+  const isTrue = (strLen === 4 || strLen === 6)
+        && s.split('').every((element) => !isNaN(element));
+  return isTrue;
+}
