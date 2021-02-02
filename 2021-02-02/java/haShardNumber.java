@@ -5,8 +5,6 @@ class Solution {
         int remainder = 0;
         int accumulator = 0;
         
-     
- 
         remainder = x%10;
         quotient = x/10;
         
