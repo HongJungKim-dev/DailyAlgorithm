@@ -11,7 +11,7 @@ class Solution {
         
 	        for(int i=0; i<compLen; i++){
 	            for(int j=0; j<temp.size(); j++){
-	                if(temp.get(j) == completion[i]) {
+	                if(temp.get(j).equals(completion[i])) {
 	                	temp.remove(j);
 	                	break;
 	                }
