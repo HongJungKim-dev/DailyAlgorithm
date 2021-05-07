@@ -7,14 +7,11 @@ function solution(progresses, speeds) {
     (progress, index) => Math.ceil((100 - progress) / speeds[index]),
   );
 
-  let accumulator = 0;
   let count = 1;
   let max = days[0];
 
   for (let i = 1; i < len; i += 1, count += 1) {
-    accumulator += days[i];
-
-    if (max >= accumulator) {
+    if (max >= days[i]) {
       continue;
     }
 
@@ -22,9 +19,9 @@ function solution(progresses, speeds) {
 
     max = days[i];
     count = 0;
-    accumulator = 0;
   }
 
   deploys.push(count);
+    
   return deploys;
 }
